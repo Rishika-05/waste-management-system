@@ -1,0 +1,4 @@
+MYSQL_URL: 'jdbc:mysql://localhost:3306/waste-management'
+MYSQL_USERNAME: 'root'
+MYSQL_PASSWORD: 'root'
+FLYWAY_URL: 'jdbc:mysql://localhost:3306/'

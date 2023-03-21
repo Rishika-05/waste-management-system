@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  jndi:
+    ignore: true
+  profiles:
+    active: dev
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: ${MYSQL_URL}
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: false
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    url: ${FLYWAY_URL}
+    user: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+    schemas: investor
+    enabled: true
+    baselineVersion: 1.0
+    validateOnMigrate: true
+    validateMigrationNaming: true
+    # baselineOnMigrate is set to 'true' as flyway was configured after DB initialisation
+    baselineOnMigrate: true
+    table: db_migration_history
+    baselineDescription: 'investor db migration baseline'
