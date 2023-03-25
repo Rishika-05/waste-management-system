@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Audited
 @Table(name = "air_quality")
 public class AirQualityEntity extends BaseEntity {
     @Column(name = "fk_facility_id")

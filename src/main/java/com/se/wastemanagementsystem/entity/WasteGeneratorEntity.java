@@ -1,9 +1,14 @@
 package com.se.wastemanagementsystem.entity;
 
-import javax.persistence.Column;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "waste_generator")
 public class WasteGeneratorEntity extends BaseEntity {
     @Column(name = "address")
     private String address;
