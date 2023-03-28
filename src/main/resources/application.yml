@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   jndi:
@@ -24,7 +24,7 @@ spring:
     url: ${FLYWAY_URL}
     user: ${MYSQL_USERNAME}
     password: ${MYSQL_PASSWORD}
-    schemas: investor
+    schemas: waste-management
     enabled: true
     baselineVersion: 1.0
     validateOnMigrate: true
@@ -32,4 +32,4 @@ spring:
     # baselineOnMigrate is set to 'true' as flyway was configured after DB initialisation
     baselineOnMigrate: true
     table: db_migration_history
-    baselineDescription: 'investor db migration baseline'
+    baselineDescription: 'waste-management db migration baseline'

@@ -1,13 +1,16 @@
 package com.se.wastemanagementsystem.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+
 
 @Getter
 @Setter
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "waste_generator")
 public class WasteGeneratorEntity extends BaseEntity {
     @Column(name = "address")
@@ -19,7 +22,7 @@ public class WasteGeneratorEntity extends BaseEntity {
     private String state;
 
     @Column(name = "pincode")
-    private String pincode;
+    private Integer pincode;
     @OneToOne
     @JoinColumn(name = "fk_user_id", nullable = false)
     private UserEntity user;
