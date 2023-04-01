@@ -17,17 +17,9 @@ public class WasteFacilitatorEntity extends BaseEntity{
     @Column(name = "joining_date")
     private LocalDate date;
 
-    @OneToOne
-    @JoinColumn(name = "fk_user_id", nullable = false)
-    private UserEntity user;
-
-    @Column(name = "fk_user_id", nullable = false, updatable = false, insertable = false)
+    @Column(name = "fk_user_id")
     private Integer userId;
 
-    @OneToOne
-    @JoinColumn(name = "fk_facility_id", nullable = false)
-    private WasteFacilityEntity wasteFacility;
-
-    @Column(name = "fk_facility_id", nullable = false, updatable = false, insertable = false)
+    @Column(name = "fk_facility_id")
     private Integer fkFacilityId;
 }

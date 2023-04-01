@@ -1,9 +1,9 @@
 package com.se.wastemanagementsystem.entity;
 
 import lombok.*;
-import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -16,15 +16,11 @@ import java.time.LocalDateTime;
 public class AirQualityEntity extends BaseEntity {
 
     @Column(name = "record_date")
-    private LocalDateTime recordedAt;
+    private LocalDate recordedAt;
 
-    @Column(name = "index")
-    private Double index;
+    @Column(name = "aqi")
+    private Float index;
 
-    @OneToOne
-    @JoinColumn(name = "fk_facility_id", nullable = false)
-    private WasteFacilityEntity wasteFacility;
-
-    @Column(name = "fk_facility_id", nullable = false, updatable = false, insertable = false)
+    @Column(name = "fk_facility_id")
     private Integer fkFacilityId;
 }

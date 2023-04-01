@@ -1,10 +1,12 @@
 package com.se.wastemanagementsystem.enums;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
 public enum Roles {
     WG("Waste Generator"),
     WC("Waste Collector"),
@@ -13,5 +15,4 @@ public enum Roles {
     ADMIN("Admin");
 
     private String label;
-
 }

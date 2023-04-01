@@ -1,5 +1,6 @@
 package com.se.wastemanagementsystem.controllers;
 
+import com.se.wastemanagementsystem.enums.Roles;
 import com.se.wastemanagementsystem.service.UserService;
 import com.se.wastemanagementsystem.utils.CoreResponse;
 import lombok.AllArgsConstructor;
@@ -28,5 +29,15 @@ public class UserController {
     @GetMapping("/details")
     public ResponseEntity<CoreResponse<Object>> getDetails(@RequestHeader("Authorization") Integer id){
         return CoreResponse.buildSuccessResponseWithData(userService.getDetails(id));
+    }
+
+    @PutMapping("/profile")
+    public ResponseEntity<CoreResponse<Object>> updateDetails(@RequestBody Map<String, String> req, @RequestHeader("Authorization") Integer id){
+        return CoreResponse.buildSuccessResponseWithData(userService.updateDetails(id, req));
+    }
+
+    @GetMapping("/waste")
+    public ResponseEntity<CoreResponse<Object>> getWasteInfo(@RequestHeader("Authorization") Integer id){
+        return CoreResponse.buildSuccessResponseWithData(userService.getWasteInfo(id));
     }
 }

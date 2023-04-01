@@ -23,10 +23,6 @@ public class WasteGeneratorEntity extends BaseEntity {
 
     @Column(name = "pincode")
     private Integer pincode;
-    @OneToOne
-    @JoinColumn(name = "fk_user_id", nullable = false)
-    private UserEntity user;
-
-    @Column(name = "fk_user_id", nullable = false, updatable = false, insertable = false)
+    @Column(name = "fk_user_id")
     private Integer userId;
 }

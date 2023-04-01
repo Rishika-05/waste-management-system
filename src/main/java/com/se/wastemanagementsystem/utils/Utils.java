@@ -8,7 +8,11 @@ import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
 import java.security.spec.KeySpec;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Base64;
+import java.util.Objects;
 
 public class Utils {
     public static String encrypt256(String string) {
@@ -28,5 +32,20 @@ public class Utils {
         } catch (Exception e) {
         }
         return encryptedPassword;
+    }
+
+    public static String getFormattedDate(LocalDate date){
+        if(Objects.isNull(date))
+            return null;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate =  date.format(formatter);
+        return formattedDate;
+    }
+    public static String getFormattedDatetime(LocalDateTime dt){
+        if(Objects.isNull(dt))
+            return null;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formattedDateTime = dt.format(formatter);
+        return formattedDateTime;
     }
 }
