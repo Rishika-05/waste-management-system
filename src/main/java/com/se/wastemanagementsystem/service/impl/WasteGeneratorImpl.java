@@ -4,7 +4,7 @@ import com.se.wastemanagementsystem.entity.WasteEntity;
 import com.se.wastemanagementsystem.entity.WasteGeneratorEntity;
 import com.se.wastemanagementsystem.repository.WasteGeneratorRepo;
 import com.se.wastemanagementsystem.repository.WasteRepo;
-import com.se.wastemanagementsystem.service.WgService;
+import com.se.wastemanagementsystem.service.WasteGenerator;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ import java.util.Map;
 
 @Service
 @AllArgsConstructor
-public class WgServiceImpl implements WgService {
+public class WasteGeneratorImpl implements WasteGenerator {
     private final WasteGeneratorRepo wasteGeneratorRepo;
     private final WasteRepo wasteRepo;
     @Override

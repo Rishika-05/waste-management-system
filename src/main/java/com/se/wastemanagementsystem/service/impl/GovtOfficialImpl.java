@@ -4,7 +4,7 @@ import com.se.wastemanagementsystem.entity.AirQualityEntity;
 import com.se.wastemanagementsystem.entity.WasteFacilityEntity;
 import com.se.wastemanagementsystem.repository.AirQualityRepo;
 import com.se.wastemanagementsystem.repository.WasteFaciltyRepo;
-import com.se.wastemanagementsystem.service.GoService;
+import com.se.wastemanagementsystem.service.GovtOfficial;
 import com.se.wastemanagementsystem.utils.Utils;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.*;
 
 @Service
 @AllArgsConstructor
-public class GoServiceImpl implements GoService {
+public class GovtOfficialImpl implements GovtOfficial {
     private final AirQualityRepo airQualityRepo;
     private final WasteFaciltyRepo wasteFaciltyRepo;
 

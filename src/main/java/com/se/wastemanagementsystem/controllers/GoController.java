@@ -1,6 +1,6 @@
 package com.se.wastemanagementsystem.controllers;
 
-import com.se.wastemanagementsystem.service.GoService;
+import com.se.wastemanagementsystem.service.GovtOfficial;
 import com.se.wastemanagementsystem.utils.CoreResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +13,10 @@ import java.util.Map;
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/go")
 public class GoController {
-    private final GoService goService;
+    private final GovtOfficial govtOfficial;
     @PutMapping("/aq")
     public ResponseEntity<CoreResponse<Object>> monitorAQ(@RequestHeader("Authorization") Integer id, @RequestBody Map<String, String> req){
-        return CoreResponse.buildSuccessResponseWithData(goService.monitorAQ(id, req));
+        return CoreResponse.buildSuccessResponseWithData(govtOfficial.monitorAQ(id, req));
     }
 
 }

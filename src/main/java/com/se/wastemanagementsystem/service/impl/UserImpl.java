@@ -1,12 +1,11 @@
 package com.se.wastemanagementsystem.service.impl;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.se.wastemanagementsystem.entity.*;
 import com.se.wastemanagementsystem.enums.ResponseCodes;
 import com.se.wastemanagementsystem.enums.Roles;
 import com.se.wastemanagementsystem.exception.SwmsException;
 import com.se.wastemanagementsystem.repository.*;
-import com.se.wastemanagementsystem.service.UserService;
+import com.se.wastemanagementsystem.service.User;
 import com.se.wastemanagementsystem.utils.Utils;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,7 +16,7 @@ import java.util.*;
 
 @Service
 @AllArgsConstructor
-public class UserServiceImpl implements UserService {
+public class UserImpl implements User {
     private final UserRepository userRepository;
     private final WasteGeneratorRepo wasteGeneratorRepo;
     private final WasteCollectorRepo wasteCollectorRepo;

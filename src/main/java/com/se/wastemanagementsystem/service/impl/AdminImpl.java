@@ -2,7 +2,7 @@ package com.se.wastemanagementsystem.service.impl;
 
 import com.se.wastemanagementsystem.entity.WasteFacilityEntity;
 import com.se.wastemanagementsystem.repository.WasteFaciltyRepo;
-import com.se.wastemanagementsystem.service.AdminService;
+import com.se.wastemanagementsystem.service.Admin;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Service
 @AllArgsConstructor
-public class AdminServiceImpl implements AdminService {
+public class AdminImpl implements Admin {
 
     private final WasteFaciltyRepo wasteFaciltyRepo;
     @Override

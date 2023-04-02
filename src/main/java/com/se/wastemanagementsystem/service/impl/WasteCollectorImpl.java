@@ -1,10 +1,9 @@
 package com.se.wastemanagementsystem.service.impl;
 
-import com.se.wastemanagementsystem.entity.WasteCollectorEntity;
 import com.se.wastemanagementsystem.entity.WasteEntity;
 import com.se.wastemanagementsystem.repository.WasteCollectorRepo;
 import com.se.wastemanagementsystem.repository.WasteRepo;
-import com.se.wastemanagementsystem.service.WcService;
+import com.se.wastemanagementsystem.service.WasteCollector;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +13,7 @@ import java.util.Map;
 
 @Service
 @AllArgsConstructor
-public class WcServiceImpl implements WcService {
+public class WasteCollectorImpl implements WasteCollector {
 
     private final WasteRepo wasteRepo;
     private final WasteCollectorRepo wasteCollectorRepo;

@@ -6,7 +6,7 @@ import com.se.wastemanagementsystem.entity.WasteFacilitatorEntity;
 import com.se.wastemanagementsystem.repository.AirQualityRepo;
 import com.se.wastemanagementsystem.repository.WasteFacilitatorRepo;
 import com.se.wastemanagementsystem.repository.WasteRepo;
-import com.se.wastemanagementsystem.service.WfService;
+import com.se.wastemanagementsystem.service.WasteFacilitator;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ import java.util.Map;
 
 @Service
 @AllArgsConstructor
-public class WfServiceImpl implements WfService {
+public class WasteFacilitatorImpl implements WasteFacilitator {
 
     private final AirQualityRepo airQualityRepo;
     private final WasteRepo wasteRepo;

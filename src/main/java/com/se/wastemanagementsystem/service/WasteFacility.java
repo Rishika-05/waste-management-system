@@ -1,6 +1,6 @@
 package com.se.wastemanagementsystem.service;
 
-public interface WfacilityService {
+public interface WasteFacility {
     void processWaste();
     void disposeWaste();
 }

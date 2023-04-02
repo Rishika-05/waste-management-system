@@ -1,6 +1,6 @@
 package com.se.wastemanagementsystem.controllers;
 
-import com.se.wastemanagementsystem.service.WcService;
+import com.se.wastemanagementsystem.service.WasteCollector;
 import com.se.wastemanagementsystem.utils.CoreResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,14 +13,14 @@ import java.util.Map;
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/wc")
 public class WcController {
-    private final WcService wcService;
+    private final WasteCollector wasteCollector;
     @PutMapping("/update-waste")
     public ResponseEntity<CoreResponse<Object>> collectWaste(@RequestHeader("Authorization") Integer id, @RequestBody Map<String, Object> req){
-        return CoreResponse.buildSuccessResponseWithData(wcService.collectWaste(id, req));
+        return CoreResponse.buildSuccessResponseWithData(wasteCollector.collectWaste(id, req));
     }
 
     @PutMapping("/update-waste-2")
     public ResponseEntity<CoreResponse<Object>> transportWaste(@RequestHeader("Authorization") Integer id, @RequestBody Map<String, Object> req){
-        return CoreResponse.buildSuccessResponseWithData(wcService.transportWaste(id, req));
+        return CoreResponse.buildSuccessResponseWithData(wasteCollector.transportWaste(id, req));
     }
 }
